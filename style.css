@@ -1,0 +1,154 @@
+/* ===== Roti Pelangi - style.css ===== */
+
+/* Warna tema (full colour) */
+:root {
+  --pink: #ff4f81;
+  --oranye: #ff9f1c;
+  --kuning: #ffd23f;
+  --tosca: #2ec4b6;
+  --ungu: #7b2cbf;
+  --krem: #fff8ec;
+  --gelap: #3a2142;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  background: var(--krem);
+  color: var(--gelap);
+  line-height: 1.65;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--ungu); }
+
+/* ----- HEADER ----- */
+header {
+  background: linear-gradient(90deg, var(--pink), var(--oranye), var(--kuning));
+  padding: 28px 20px 0;
+  text-align: center;
+}
+header h1 {
+  font-family: Georgia, serif;
+  font-size: 2.6rem;
+  color: #fff;
+  text-shadow: 2px 2px 0 var(--ungu);
+}
+header p { color: var(--gelap); font-weight: bold; margin-bottom: 18px; }
+
+/* ----- NAVIGASI ----- */
+nav {
+  background: var(--ungu);
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 22px;
+  border-radius: 999px;
+}
+nav a:hover { background: var(--tosca); }
+nav a.aktif { background: var(--kuning); color: var(--gelap); }
+
+/* ----- LAYOUT UMUM ----- */
+main { max-width: 1000px; margin: 0 auto; padding: 30px 20px; }
+section { margin-bottom: 40px; }
+h2 {
+  font-family: Georgia, serif;
+  color: var(--ungu);
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 5px solid var(--pink);
+  display: inline-block;
+}
+p { margin-bottom: 12px; }
+
+/* ----- HERO ----- */
+.hero img {
+  width: 100%;
+  border-radius: 20px;
+  border: 6px solid var(--kuning);
+}
+.hero p { margin-top: 16px; font-size: 1.1rem; }
+
+/* ----- TEKS + GAMBAR BERDAMPINGAN ----- */
+.dua-kolom {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.dua-kolom > div { flex: 1 1 320px; }
+.dua-kolom img { border-radius: 16px; border: 5px solid var(--tosca); }
+
+/* ----- KARTU ----- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+}
+.kartu {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border-top: 8px solid var(--pink);
+}
+.kartu:nth-child(2) { border-top-color: var(--oranye); }
+.kartu:nth-child(3) { border-top-color: var(--tosca); }
+.kartu:nth-child(4) { border-top-color: var(--ungu); }
+.kartu div { padding: 14px; }
+.kartu h3 { color: var(--pink); margin-bottom: 4px; }
+
+/* ----- VISI MISI ----- */
+.kotak-warna { padding: 22px; border-radius: 16px; color: #fff; }
+.visi { background: var(--tosca); }
+.misi { background: var(--pink); }
+.kotak-warna h3 { margin-bottom: 8px; }
+.kotak-warna ul { margin-left: 20px; }
+
+/* ----- TABEL ----- */
+.bungkus-tabel { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: bold;
+  padding: 8px 0;
+  color: var(--ungu);
+}
+th { background: var(--ungu); color: #fff; padding: 12px; text-align: left; }
+td { padding: 11px 12px; border-bottom: 1px solid #f0dcc8; }
+tbody tr:nth-child(odd) { background: #fff3d6; }
+tbody tr:nth-child(even) { background: #ffe6ef; }
+tbody tr:hover { background: #d6f5f1; }
+tfoot td { background: var(--kuning); font-weight: bold; }
+
+/* ----- FORM KONTAK ----- */
+.kontak { background: #fff; padding: 22px; border-radius: 16px; border: 4px dashed var(--oranye); }
+
+/* ----- FOOTER ----- */
+footer {
+  background: var(--gelap);
+  color: #fff;
+  text-align: center;
+  padding: 22px 10px;
+  border-top: 8px solid var(--tosca);
+}
+footer a { color: var(--kuning); }
+
+@media (max-width: 600px) {
+  header h1 { font-size: 1.9rem; }
+  nav { flex-wrap: wrap; }
+}
